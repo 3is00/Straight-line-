@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title> (with Eissa)الخط المستقيم · Straight Line(with Eissa)</title>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#e6f1ff;--bg2:#f3e8ff;--blob1:#7cc4ff;--blob2:#c9a2ff;--blob3:#ffd3a1;--ink:#14213d;--mute:#4a5a78;--glass:rgba(255,255,255,.55);--edge:rgba(255,255,255,.8);--line:rgba(20,33,61,.14);--acc:#0a7cff;--acc2:#e0457b;--ok:#0f9d6b;--grid:rgba(20,33,61,.1);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0a1226;--bg2:#1a0f33;--blob1:#1f6fff;--blob2:#8a3ffc;--blob3:#ff7a59;--ink:#eaf1ff;--mute:#a4b3d1;--glass:rgba(255,255,255,.08);--edge:rgba(255,255,255,.2);--line:rgba(255,255,255,.14);--acc:#5ab0ff;--acc2:#ff6fa5;--ok:#4fe3a8;--grid:rgba(255,255,255,.09)}}
+:root[data-theme="dark"]{--bg1:#0a1226;--bg2:#1a0f33;--blob1:#1f6fff;--blob2:#8a3ffc;--blob3:#ff7a59;--ink:#eaf1ff;--mute:#a4b3d1;--glass:rgba(255,255,255,.08);--edge:rgba(255,255,255,.2);--line:rgba(255,255,255,.14);--acc:#5ab0ff;--acc2:#ff6fa5;--ok:#4fe3a8;--grid:rgba(255,255,255,.09)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;font-family:"Readex Pro",Tahoma,"Segoe UI",system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2));background-attachment:fixed;line-height:1.75;overflow-x:hidden}
+html[lang=ar] en,html[lang=en] ar{display:none}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;pointer-events:none}
+.b1{width:46vmax;height:46vmax;background:var(--blob1);top:-12vmax;inset-inline-start:-10vmax}
+.b2{width:40vmax;height:40vmax;background:var(--blob2);bottom:-14vmax;inset-inline-end:-8vmax}
+.b3{width:26vmax;height:26vmax;background:var(--blob3);top:38%;inset-inline-end:30%;opacity:.3}
+.wrap{max-width:1060px;margin:auto;padding:18px 16px 60px}
+.glass{background:var(--glass);border:1px solid var(--edge);border-radius:24px;backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 10px 40px rgba(10,20,60,.18),inset 0 1px 0 var(--edge)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;margin-bottom:18px}
+.bar b{font-weight:700}
+.btn{font:inherit;color:var(--ink);background:var(--glass);border:1px solid var(--edge);border-radius:14px;padding:7px 14px;cursor:pointer;backdrop-filter:blur(10px)}
+.btn:hover{border-color:var(--acc)}
+.btn:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+h1{font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.2;margin:.2em 0;font-weight:700}
+h2{font-size:1.3rem;margin:.2em 0 .5em}
+h3{font-size:1.05rem;margin:1em 0 .3em}
+p{margin:.4em 0}
+.hero{padding:26px;display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:center}
+.hero small{color:var(--mute)}
+.m{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Cambria Math","STIX Two Math",Georgia,serif;font-size:1.05em}
+.box{padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--line);margin:8px 0;overflow-x:auto}
+.cv{width:100%;max-width:470px;aspect-ratio:1;display:block;margin:auto;border-radius:20px;border:1px solid var(--edge);background:var(--glass);touch-action:none;cursor:grab}
+.out{display:grid;gap:8px;margin-top:12px}
+.out div{display:flex;justify-content:space-between;gap:10px;padding:9px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--line)}
+.out span:last-child{font-weight:600;color:var(--acc)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 12px}
+.tab{font:inherit;color:var(--ink);padding:9px 16px;border-radius:999px;border:1px solid var(--edge);background:var(--glass);cursor:pointer;backdrop-filter:blur(10px)}
+.tab[aria-selected=true]{background:var(--acc);color:#fff;border-color:transparent}
+.panel{display:none;padding:22px}
+.panel.on{display:block}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{padding:16px;border-radius:18px;background:var(--glass);border:1px solid var(--line)}
+label{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:6px 0}
+input[type=number]{width:84px;font:inherit;color:var(--ink);background:var(--glass);border:1px solid var(--line);border-radius:10px;padding:5px 8px;direction:ltr;text-align:center}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.res{margin-top:8px;font-weight:600;color:var(--ok)}
+details{border:1px solid var(--line);border-radius:16px;background:var(--glass);margin:10px 0;padding:2px 14px}
+summary{cursor:pointer;padding:10px 0;font-weight:600}
+details[open] summary{color:var(--acc)}
+.note{border-inline-start:4px solid var(--acc2);padding:8px 14px;border-radius:12px;background:var(--glass);margin:10px 0}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;background:var(--acc);color:#fff;font-size:.8rem}
+@media (max-width:760px){.hero,.g2{grid-template-columns:1fr}.hero{padding:18px}}
+.glass{position:relative;backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);box-shadow:0 18px 50px rgba(10,20,60,.22),inset 0 1px 0 var(--edge),inset 0 -20px 40px rgba(255,255,255,.04)}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.2px;background:linear-gradient(135deg,rgba(255,255,255,.8),transparent 38%,transparent 62%,rgba(255,255,255,.3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.card,.out div,details{transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover,details:hover{border-color:var(--acc);box-shadow:0 8px 26px rgba(10,124,255,.18)}
+.b1{animation:dr 24s ease-in-out infinite alternate}.b2{animation:dr 30s ease-in-out infinite alternate-reverse}
+@keyframes dr{to{transform:translate(6vmax,4vmax) scale(1.08)}}
+.opt{margin:4px 4px 0 0}.opt.ok{background:var(--ok);color:#fff;border-color:transparent}.opt.bad{background:var(--acc2);color:#fff;border-color:transparent}
+.pill.big{font-size:1rem;padding:4px 16px;background:var(--ok)}
+svg.cs{width:100%;max-width:260px;display:block;margin:8px auto;border-radius:16px;background:var(--glass);border:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="wrap">
+
+<div class="glass bar">
+  <b><ar>  (كل الحقوق محفوظة بإسم عيسى)محاضرة ١ + شيت ١ · د. هاني الديب</ar><en>Lecture 1 + Sheet 1 · Dr. Hany El Deeb(trial version)</en></b>
+  <button class="btn" id="lang" aria-label="Language"><ar>English</ar><en>العربية</en></button>
+</div>
+
+<section class="glass hero">
+  <div>
+    <h1><ar>(with Eissa)الخط المستقيم</ar><en>The Straight Line</en></h1>
+    <p><ar>اسحب النقطتين <span class="m">P</span> و <span class="m">Q</span> على الشبكة، وشاهد المسافة والميل والمعادلة تتغير لحظيًا.</ar>
+       <en>Drag points <span class="m">P</span> and <span class="m">Q</span> on the grid and watch distance, slope and equation update live.</en></p>
+    <div class="out">
+      <div><span><ar>النقطتان</ar><en>Points</en></span><span class="m" id="o-pts"></span></div>
+      <div><span><ar>المسافة d</ar><en>Distance d</en></span><span class="m" id="o-d"></span></div>
+      <div><span><ar>الميل m</ar><en>Slope m</en></span><span class="m" id="o-m"></span></div>
+      <div><span><ar>الصيغة العامة</ar><en>General form</en></span><span class="m" id="o-g"></span></div>
+      <div><span><ar>ميل وتقاطع</ar><en>Slope-intercept</en></span><span class="m" id="o-s"></span></div>
+    </div>
+  </div>
+  <canvas id="cv" class="cv" aria-label="graph"></canvas>
+</section>
+
+<div class="tabs" role="tablist" id="tabs">
+  <button class="tab" role="tab" aria-selected="true" data-p="p1"><ar>المسافة</ar><en>Distance</en></button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p2"><ar>صيغ المعادلة</ar><en>Equation forms</en></button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p3"><ar>ملاحظات وزوايا</ar><en>Remarks &amp; angles</en></button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p4"><ar>أمثلة محلولة</ar><en>Worked examples</en></button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p5"><ar>تطبيقات</ar><en>Applications</en></button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p6"><ar>شيت ١: الخط المستقيم</ar><en>Sheet 1: Line</en></button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p7"><ar>شيت ١: الدائرة</ar><en>Sheet 1: Circle</en></button>
+</div>
+
+<section class="glass panel on" id="p1">
+  <h2><ar>قانون المسافة بين نقطتين</ar><en>Distance formula</en></h2>
+  <div class="box"><span class="m">d = √[(x₂ − x₁)² + (y₂ − y₁)²]</span></div>
+  <p><ar>هو نظرية فيثاغورس: الفرق الأفقي <span class="m">Δx</span> والفرق الرأسي <span class="m">Δy</span> ضلعا مثلث قائم، والمسافة هي الوتر.</ar>
+     <en>It is Pythagoras: the horizontal change Δx and vertical change Δy are the legs of a right triangle and d is the hypotenuse.</en></p>
+  <div class="g2">
+    <div class="card"><h3><ar>مثال: P(1,2) و Q(−1,4)</ar><en>Example: P(1,2), Q(−1,4)</en></h3>
+      <span class="m">d = √[(−1−1)² + (4−2)²] = √8</span></div>
+    <div class="card"><h3><ar>مثلث متساوي الساقين</ar><en>Isosceles triangle</en></h3>
+      <p><ar>للنقاط (−2,3) و (4,0) و (1,−3): الأضلاع √45 و √45 و √18، إذن ضلعان متساويان.</ar>
+         <en>For (−2,3), (4,0), (1,−3): sides √45, √45, √18, so two sides are equal.</en></p></div>
+  </div>
+</section>
+
+<section class="glass panel" id="p2">
+  <h2><ar>صيغ معادلة الخط المستقيم</ar><en>Forms of a line's equation</en></h2>
+  <div class="g2">
+    <div class="card"><h3><ar>صيغة النقطتين</ar><en>Two-point form</en></h3><div class="box"><span class="m">(y−y₁)/(x−x₁) = (y₂−y₁)/(x₂−x₁)</span></div></div>
+    <div class="card"><h3><ar>صيغة النقطة والميل</ar><en>Point-slope form</en></h3><div class="box"><span class="m">y − y₁ = m(x − x₁)</span></div></div>
+    <div class="card"><h3><ar>الصيغة العامة</ar><en>General form</en></h3><div class="box"><span class="m">Ax + By + C = 0, m = −A/B</span></div></div>
+    <div class="card"><h3><ar>صيغة الميل والمقطع</ar><en>Slope-intercept form</en></h3><div class="box"><span class="m">y = mx + b</span></div></div>
+  </div>
+  <h3><ar>جرّب: ميل ومقطعا الخط  Ax + By + C = 0</ar><en>Try it: slope and intercepts of Ax + By + C = 0</en></h3>
+  <div class="card">
+    <label>A <input type="number" id="fa" value="2"></label>
+    <label>B <input type="number" id="fb" value="4"></label>
+    <label>C <input type="number" id="fc" value="-12"></label>
+    <div class="res m" id="fr"></div>
+  </div>
+  <div class="note"><ar>إذا كان الميل موجبًا فالزاوية مع محور x حادة، وإذا كان سالبًا فهي منفرجة. الخط الأفقي <span class="m">y = b</span> والرأسي <span class="m">x = a</span>، والخط المار بنقطة الأصل <span class="m">y = mx</span>.</ar>
+  <en>Positive slope → acute angle with the x-axis; negative slope → obtuse. Horizontal line: y = b. Vertical line: x = a. Through the origin: y = mx.</en></div>
+</section>
+
+<section class="glass panel" id="p3">
+  <h2><ar>التوازي والتعامد والزاوية</ar><en>Parallel, perpendicular &amp; angle</en></h2>
+  <div class="box"><ar>متوازيان:</ar><en>Parallel:</en> <span class="m">m₁ = m₂</span> &nbsp;·&nbsp; <ar>متعامدان:</ar><en>Perpendicular:</en> <span class="m">m₁·m₂ = −1</span></div>
+  <div class="box"><span class="m">tan φ = (m₂ − m₁)/(1 + m₁m₂)</span> &nbsp; <ar>(نأخذ القيمة المطلقة لزاوية حادة)</ar><en>(take the absolute value for the acute angle)</en></div>
+  <div class="g2">
+    <div class="card"><h3><ar>حاسبة الزاوية بين خطين</ar><en>Angle between two lines</en></h3>
+      <label>m₁ <input type="number" id="m1" value="0.5774" step="any"></label>
+      <label>m₂ <input type="number" id="m2" value="1.7321" step="any"></label>
+      <div class="res m" id="ar2"></div>
+      <small><ar>القيمتان الافتراضيتان: 1/√3 و √3 ← 30°</ar><en>Defaults: 1/√3 and √3 → 30°</en></small></div>
+    <div class="card"><h3><ar>بعد نقطة عن خط</ar><en>Point-to-line distance</en></h3>
+      <div class="box"><span class="m">d = |ax₁ + by₁ + c| / √(a² + b²)</span></div>
+      <label>a,b,c <span><input type="number" id="pa" value="3"> <input type="number" id="pb" value="4"> <input type="number" id="pc" value="-5"></span></label>
+      <label>x₁,y₁ <span><input type="number" id="px" value="1"> <input type="number" id="py" value="2"></span></label>
+      <div class="res m" id="pr"></div></div>
+  </div>
+</section>
+
+<section class="glass panel" id="p4">
+  <h2><ar>أمثلة المحاضرة بالحل</ar><en>Lecture examples, solved</en></h2>
+  <details><summary><ar>خط يمر بالنقطتين (−2,5) و (1,−3)</ar><en>Line through (−2,5) and (1,−3)</en></summary>
+    <p class="m">(y+3)/(x−1) = 8/(−3) ⇒ −3y − 9 = 8x − 8 ⇒ 8x + 3y + 1 = 0</p></details>
+  <details><summary><ar>ميله 2 ويمر بالنقطة (1,−3)</ar><en>Slope 2 through (1,−3)</en></summary>
+    <p class="m">(y+3)/(x−1) = 2 ⇒ 2x − y − 5 = 0</p></details>
+  <details><summary><ar>2x + 4y − 12 = 0: الميل والمقطعان</ar><en>2x + 4y − 12 = 0: slope &amp; intercepts</en></summary>
+    <p class="m">m = −2/4 = −1/2 · y-int: (0,3) · x-int: (6,0)</p></details>
+  <details><summary><ar>إثبات تعامد 2x+3y=1 و 6x−4y−1=0</ar><en>Show 2x+3y=1 ⟂ 6x−4y−1=0</en></summary>
+    <p class="m">m₁ = −2/3, m₂ = 3/2 ⇒ m₁·m₂ = −1</p></details>
+  <details><summary><ar>النقطة المتساوية البعد عن A(1,7) B(8,6) C(7,−1)</ar><en>Point equidistant from A(1,7), B(8,6), C(7,−1)</en></summary>
+    <p class="m">PA=PB ⇒ 7x − y − 25 = 0 &nbsp; PA=PC ⇒ 3x − 4y = 0 &nbsp; ⇒ P(4,3)</p></details>
+  <details><summary><ar>موازٍ لـ 4x+6y+5=0 ويمر بـ (5,2)</ar><en>Parallel to 4x+6y+5=0 through (5,2)</en></summary>
+    <p class="m">m = −2/3 ⇒ y − 2 = −(2/3)(x − 5) ⇒ y = −(2/3)x + 16/3</p>
+    <div class="note"><span class="pill"><ar>تصحيح</ar><en>Correction</en></span> <ar>في المحاضرة كُتبت الإجابة <span class="m">y = −2/3 x − 5/6</span> وهي غير صحيحة؛ الصحيح مقطع y يساوي 16/3. تحقق: النقطة (5,2) تحقق المعادلة الصحيحة فقط.</ar>
+    <en>The lecture shows y = −2/3 x − 5/6, which is wrong; the y-intercept should be 16/3. Check: (5,2) satisfies only the corrected equation.</en></div></details>
+  <details><summary><ar>عمودي على 2x−3y+4=0 ويمر بـ (−1,1)</ar><en>Perpendicular to 2x−3y+4=0 through (−1,1)</en></summary>
+    <p class="m">m₂ = 2/3 ⇒ m₁ = −3/2 ⇒ 3x + 2y + 1 = 0</p></details>
+  <details><summary><ar>الزاوية بين y = x/√3 − 1 و y = √3x + 3</ar><en>Angle between y = x/√3 − 1 and y = √3x + 3</en></summary>
+    <p class="m">tan θ = (√3 − 1/√3)/(1 + 1) = 1/√3 ⇒ θ = 30°</p></details>
+  <details><summary><ar>إثبات أن A(1,3) B(3,7) C(7,5) مثلث قائم بطريقتين</ar><en>A(1,3), B(3,7), C(7,5) is a right triangle (two ways)</en></summary>
+    <p><ar>بالميل:</ar><en>Slopes:</en> <span class="m">m_AB = 2, m_BC = −1/2 ⇒ AB ⟂ BC</span></p>
+    <p><ar>بالمسافة:</ar><en>Distances:</en> <span class="m">AB² + BC² = 20 + 20 = 40 = AC²</span></p></details>
+  <details><summary><ar>الزاوية بين 2x−3y+4=0 و y=5x+2</ar><en>Angle between 2x−3y+4=0 and y=5x+2</en></summary>
+    <p class="m">m₁ = 2/3, m₂ = 5 ⇒ tan φ = (13/3)/(13/3) = 1 ⇒ φ = 45°</p></details>
+  <details><summary><ar>تمرين: 8x + 5y = 20</ar><en>Exercise: 8x + 5y = 20</en></summary>
+    <p class="m">m = −8/5 · y-intercept = 4</p></details>
+</section>
+
+<section class="glass panel" id="p6">
+  <h2><ar>شيت ١ · الجزء ١: الخط المستقيم</ar><en>Sheet 1 · Part 1: Straight line</en></h2>
+  <div class="note"><ar>راجعت كل إجابات الشيت بالحساب: في 3 أخطاء فعلية في الإجابات المطبوعة (١أ، ٤، ١١ب) وملاحظتين على ٨ و١٠ج. كل ملاحظة مكتوبة تحت مسألتها.</ar><en>I re-checked every printed answer: 3 real errors (1a, 4, 11b) plus notes on 8 and 10c, each flagged under its problem.</en></div>
+  <h3><ar>اختبر نفسك (سؤال ٩)</ar><en>Test yourself (Q9)</en> <span class="pill big" id="sc">0 / 9</span></h3>
+  <div class="g2" id="qz"></div>
+  <h3><ar>المسائل المكتوبة بالحل</ar><en>Written problems, solved</en></h3>
+  <div id="lw"></div>
+</section>
+
+<section class="glass panel" id="p7">
+  <h2><ar>شيت ١ · الجزء ٢: الدائرة</ar><en>Sheet 1 · Part 2: Circle</en></h2>
+  <div class="box"><span class="m">(x − h)² + (y − k)² = r²</span> &nbsp;·&nbsp; <span class="m">x² + y² + Dx + Ey + F = 0 ⇒ (−D/2 , −E/2), r² = D²/4 + E²/4 − F</span></div>
+  <div class="g2">
+    <div class="card"><h3><ar>حاسبة الدائرة (الصيغة العامة)</ar><en>Circle explorer (general form)</en></h3>
+      <label>D <input type="number" id="cd" value="-8"></label>
+      <label>E <input type="number" id="ce" value="6"></label>
+      <label>F <input type="number" id="cf" value="-2"></label>
+      <div class="res m" id="cr2"></div>
+      <small><ar>القيم الافتراضية = ١٢أ. اقسم المعادلة على معامل x² أولًا.</ar><en>Defaults = 12a. Divide by the x² coefficient first.</en></small>
+      <svg class="cs" id="csv" viewBox="0 0 200 200"></svg></div>
+    <div id="cw"></div>
+  </div>
+</section>
+
+<section class="glass panel" id="p5">
+  <h2><ar>تطبيقات حياتية</ar><en>Real-life applications</en></h2>
+  <div class="g2">
+    <div class="card"><h3><ar>سلسيوس ↔ فهرنهايت</ar><en>Celsius ↔ Fahrenheit</en></h3>
+      <div class="box"><span class="m">F = (9/5)C + 32</span></div>
+      <input type="range" id="cr" min="-40" max="120" value="57" aria-label="Celsius">
+      <div class="res m" id="cres"></div>
+      <small><ar>الواجب: 57°C ← 134.6°F</ar><en>Homework: 57°C → 134.6°F</en></small></div>
+    <div class="card"><h3><ar>طاقة العجل مقابل سرعته</ar><en>Calf energy vs speed</en></h3>
+      <div class="box"><span class="m">y = 0.0011x + 0.0397</span></div>
+      <input type="range" id="sr" min="0" max="300" value="243" aria-label="Speed">
+      <div class="res m" id="sres"></div>
+      <small><ar>عند السكون: 0.0397. وللحد الأقصى 0.36 ← السرعة ≈ 291 م/دقيقة.</ar><en>At rest: 0.0397. For the 0.36 maximum → speed ≈ 291 m/min.</en></small></div>
+  </div>
+</section>
+
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const AR=()=>document.documentElement.lang==='ar';
+const fx=n=>Number.isInteger(n)?String(n):(+n.toFixed(3)).toString();
+function lin(A,B,C){let s='';[[A,'x'],[B,'y'],[C,'']].forEach(([c,v])=>{if(!c)return;const a=Math.abs(c);s+=(s?(c<0?' − ':' + '):(c<0?'−':''))+((a===1&&v)?'':a)+v});return (s||'0')+' = 0'}
+/* tabs */
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;
+ document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',t===b));
+ document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===b.dataset.p))});
+/* language */
+function setLang(l){document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';try{localStorage.setItem('lang',l)}catch(e){};upd();draw()}
+$('lang').onclick=()=>setLang(AR()?'en':'ar');
+try{const l=localStorage.getItem('lang');if(l)setLang(l)}catch(e){}
+/* graph */
+const cv=$('cv'),ctx=cv.getContext('2d'),R=6;
+let P={x:1,y:2},Q={x:-1,y:4},drag=null,S=470;
+function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;S=r.width;cv.width=r.width*d;cv.height=r.width*d;ctx.setTransform(d,0,0,d,0,0)}
+const px=v=>S/2+v*S/(2*R+1.2),py=v=>S/2-v*S/(2*R+1.2);
+const cs=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function draw(){size();ctx.clearRect(0,0,S,S);const k=S/(2*R+1.2);
+ ctx.lineWidth=1;ctx.strokeStyle=cs('--grid');
+ for(let i=-R;i<=R;i++){ctx.beginPath();ctx.moveTo(px(i),0);ctx.lineTo(px(i),S);ctx.moveTo(0,py(i));ctx.lineTo(S,py(i));ctx.stroke()}
+ ctx.strokeStyle=cs('--mute');ctx.lineWidth=1.6;ctx.beginPath();ctx.moveTo(0,py(0));ctx.lineTo(S,py(0));ctx.moveTo(px(0),0);ctx.lineTo(px(0),S);ctx.stroke();
+ ctx.fillStyle=cs('--mute');ctx.font='11px sans-serif';for(let i=-R;i<=R;i+=2){if(i){ctx.fillText(i,px(i)-4,py(0)+14);ctx.fillText(i,px(0)+5,py(i)+4)}}
+ const dx=Q.x-P.x,dy=Q.y-P.y;
+ if(dx||dy){ctx.strokeStyle=cs('--acc');ctx.lineWidth=2.4;ctx.beginPath();
+  if(dx===0){ctx.moveTo(px(P.x),0);ctx.lineTo(px(P.x),S)}else{const m=dy/dx,a=-R-1,b=R+1;ctx.moveTo(px(a),py(P.y+m*(a-P.x)));ctx.lineTo(px(b),py(P.y+m*(b-P.x)))}ctx.stroke();
+  ctx.setLineDash([6,5]);ctx.strokeStyle=cs('--acc2');ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(px(P.x),py(P.y));ctx.lineTo(px(Q.x),py(Q.y));ctx.stroke();ctx.setLineDash([])}
+ [[P,'P'],[Q,'Q']].forEach(([p,n])=>{ctx.fillStyle=cs('--acc2');ctx.beginPath();ctx.arc(px(p.x),py(p.y),9,0,7);ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();
+  ctx.fillStyle=cs('--ink');ctx.font='600 13px sans-serif';ctx.fillText(n+'('+p.x+','+p.y+')',px(p.x)+12,py(p.y)-10)});
+ upd()}
+function upd(){const dx=Q.x-P.x,dy=Q.y-P.y,und=AR()?'غير معرّف':'undefined';
+ $('o-pts').textContent=`P(${P.x},${P.y})  Q(${Q.x},${Q.y})`;
+ const d2=dx*dx+dy*dy,r=Math.sqrt(d2);$('o-d').textContent=d2===0?'0':(Number.isInteger(r)?r:`√${d2} ≈ ${fx(r)}`);
+ if(!d2){$('o-m').textContent='—';$('o-g').textContent='—';$('o-s').textContent='—';return}
+ $('o-m').textContent=dx===0?und:(dy%dx===0?dy/dx:`${dy}/${dx} = ${fx(dy/dx)}`);
+ let A=dy,B=-dx,C=dx*P.y-dy*P.x;if(A<0||(A===0&&B<0)){A=-A;B=-B;C=-C}
+ $('o-g').textContent=lin(A,B,C);
+ $('o-s').textContent=dx===0?`x = ${P.x}`:(()=>{const m=dy/dx,b=P.y-m*P.x;return `y = ${fx(m)}x ${b<0?'−':'+'} ${fx(Math.abs(b))}`})()}
+function pos(e){const r=cv.getBoundingClientRect(),k=r.width/(2*R+1.2);
+ return{x:Math.max(-R,Math.min(R,Math.round((e.clientX-r.left-r.width/2)/k))),y:Math.max(-R,Math.min(R,Math.round(-(e.clientY-r.top-r.height/2)/k)))}}
+cv.addEventListener('pointerdown',e=>{const p=pos(e);drag=(Math.hypot(p.x-P.x,p.y-P.y)<=Math.hypot(p.x-Q.x,p.y-Q.y))?P:Q;cv.setPointerCapture(e.pointerId);Object.assign(drag,p);draw()});
+cv.addEventListener('pointermove',e=>{if(!drag)return;Object.assign(drag,pos(e));draw()});
+cv.addEventListener('pointerup',()=>drag=null);
+addEventListener('resize',draw);
+matchMedia('(prefers-color-scheme:dark)').addEventListener('change',draw);
+/* tools */
+function tools(){
+ const A=+$('fa').value,B=+$('fb').value,C=+$('fc').value,und=AR()?'غير معرّف':'undefined';
+ $('fr').innerHTML=B===0?(A===0?'—':`x = ${fx(-C/A)}`):`m = ${fx(-A/B)} · y-int = (0, ${fx(-C/B)})`+(A!==0?` · x-int = (${fx(-C/A)}, 0)`:'');
+ const m1=+$('m1').value,m2=+$('m2').value,den=1+m1*m2;
+ $('ar2').textContent=Math.abs(den)<1e-9?'φ = 90°':`φ = ${fx(Math.atan(Math.abs((m2-m1)/den))*180/Math.PI)}°`+(Math.abs(m1-m2)<1e-9?(AR()?' (متوازيان)':' (parallel)'):'');
+ const a=+$('pa').value,b=+$('pb').value,c=+$('pc').value,x=+$('px').value,y=+$('py').value,h=Math.hypot(a,b);
+ $('pr').textContent=h?`d = ${fx(Math.abs(a*x+b*y+c)/h)}`:'—';
+ const t=+$('cr').value;$('cres').textContent=`${t}°C = ${fx(t*9/5+32)}°F`;
+ const s=+$('sr').value;$('sres').textContent=`x = ${s} → y = ${(0.0011*s+0.0397).toFixed(4)}`}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('input',tools));
+const L=[
+["١أ) مقطع x = 6 ومقطع y = 5","1a) x-intercept 6, y-intercept 5","x/6 + y/5 = 1 ⇒ 5x + 6y − 30 = 0",["الإجابة المطبوعة (6y − 5x + 30 = 0) تعطي مقطع y = −5، فهي غير صحيحة.","The printed key (6y − 5x + 30 = 0) gives y-intercept −5, so it is wrong."]],
+["١ب) يمر بـ (2,−4) وعمودي على 2x − 5y = 8","1b) through (2,−4), perpendicular to 2x − 5y = 8","m = 2/5 ⇒ m⟂ = −5/2 ; y + 4 = −(5/2)(x − 2) ⇒ 5x + 2y − 2 = 0"],
+["٢) يمر بـ (−2,3) وميله −4","2) through (−2,3), gradient −4","y − 3 = −4(x + 2) ⇒ y = −4x − 5"],
+["٣) AB ∥ PQ","3) AB ∥ PQ","m_AB = (11−4)/(7−6) = 7 ; m_PQ = 14/2 = 7 ⇒ ∥"],
+["٤) موازٍ لـ y = −2x + 6 ويمر بـ (1,10)","4) parallel to y = −2x + 6 through (1,10)","m = −2 ; y − 10 = −2(x − 1) ⇒ y = −2x + 12",["الشيت يكتب y = 2x + 12، والصحيح أن الموازي له نفس الميل −2. تحقق: (1,10) → −2 + 12 = 10 ✓","The key says y = 2x + 12, but a parallel line keeps slope −2. Check: (1,10) → −2 + 12 = 10 ✓"]],
+["٥) AB ⟂ PQ","5) AB ⟂ PQ","m_AB = 12/(−6) = −2 ; m_PQ = (8−10)/(4−8) = 1/2 ; m₁·m₂ = −1 ⇒ ⟂"],
+["٦) حل بيانيًا y = −x + 4 و y = x − 2","6) graphically: y = −x + 4, y = x − 2","−x + 4 = x − 2 ⇒ x = 3, y = 1 ⇒ (3,1)"],
+["٧) بعد (5,6) عن −2x + 3y + 4 = 0","7) distance from (5,6) to −2x + 3y + 4 = 0","d = |−10 + 18 + 4| / √13 = 12/√13 ≈ 3.33"],
+["٨) بعد (−3,7) عن y = 6x/5 + 2","8) distance from (−3,7) to y = 6x/5 + 2","6x − 5y + 10 = 0 ; d = |−18 − 35 + 10| / √61 = 43/√61 ≈ 5.506",["الشيت مطبوع فيه y = 65x + 2 لكن إجابته 5.506 تطابق الميل 6/5. لو الميل 65 حرفيًا فالمسافة ≈ 3.08.","The sheet prints y = 65x + 2, but its answer 5.506 matches slope 6/5. With slope 65 literally, d ≈ 3.08."]],
+["١٠) طاقة العجل: (75, 0.109) و (123, 0.415)","10) calf energy: (75, 0.109), (123, 0.415)","m = 0.306/48 = 0.006375 ; y = 0.006375x − 0.369 ; at rest y = −0.369 ; 0.56 ⇒ x ≈ 145.7",["ج) الناتج 145.7 فيُقرَّب إلى 146 (الشيت كتب 145). والطاقة السالبة عند السكون غير منطقية فيزيائيًا، فالنموذج صالح فقط داخل مدى السرعات المعطى.","c) 145.7 rounds to 146 (key: 145). Negative resting energy is not physical, so the model only holds within the given speed range."]],
+["١١) جهازا الأشعة","11) X-ray machines","a) fixed = 300,000 $, marginal = 10 $ ; b) 300000 + 10x = 400000 + 2x ⇒ x = 12,500",["النص مطبوع فيه 4000000 والإجابة 12500 تخص 400,000$. بالرقم المطبوع حرفيًا: x = 462,500.","The text prints 4,000,000 but the key 12,500 fits 400,000 $. With the printed figure: x = 462,500."]],
+["١٢) 3ax + 5y + a − 2 = 0 تمر بـ (−1,4)","12) 3ax + 5y + a − 2 = 0 through (−1,4)","−3a + 20 + a − 2 = 0 ⇒ −2a = −18 ⇒ a = 9"],
+["١٣) عمودي على x − 2y + 5 = 0 عند (−5,0)","13) perpendicular to x − 2y + 5 = 0 at (−5,0)","m = 1/2 ⇒ m⟂ = −2 ; y = −2(x + 5) ⇒ 2x + y + 10 = 0"]];
+const C=[
+["١) المسافة بين (−3,5) و (4,−1)","1) distance (−3,5), (4,−1)","√(49 + 36) = √85 ≈ 9.22"],
+["٢) منتصف (−5,1) و (−1,6)","2) midpoint of (−5,1), (−1,6)","(−3 , 3.5)"],
+["٣) طول ومنتصف (0,4) و (16,4)","3) length & midpoint (0,4), (16,4)","length = 16 ; midpoint = (8,4)"],
+["٤) نق = 5 ومركزها (3,−2)","4) r = 5, centre (3,−2)","(x − 3)² + (y + 2)² = 25"],
+["٥) x² + y² = 8","5) x² + y² = 8","r = √8 = 2√2 ≈ 2.83"],
+["٦) (x−2)² + (y+9)² = 1","6) (x−2)² + (y+9)² = 1","centre (2,−9) ; r = 1"],
+["٧) قطر نهايتاه (2,3) و (5,−4)","7) diameter with endpoints (2,3), (5,−4)","centre (3.5 , −0.5) ; r² = 1.5² + 3.5² = 14.5 ⇒ (x − 3.5)² + (y + 0.5)² = 14.5"],
+["٨) تمر بـ (0,0) و (4,0) و (0,8)","8) through (0,0), (4,0), (0,8)","centre (2,4) ; r² = 20 ⇒ x² + y² − 4x − 8y = 0"],
+["٩) 2x² + 2y² − 18x + 16y + 60 = 0","9) 2x² + 2y² − 18x + 16y + 60 = 0","÷2 ⇒ (x − 4.5)² + (y + 4)² = 6.25 ; centre (4.5 , −4) ; r = 2.5",["للرسم: اكتب D = −9 ، E = 8 ، F = 30 في الحاسبة.","To graph: enter D = −9, E = 8, F = 30 in the explorer."]],
+["١٠) مركزها (1,1) وتمر بـ (4,−3)","10) centre (1,1) through (4,−3)","r² = 9 + 16 = 25 ⇒ (x − 1)² + (y − 1)² = 25"],
+["١١) تمس محور y ومركزها (−8,−7)","11) tangent to y-axis, centre (−8,−7)","r = |−8| = 8 ⇒ (x + 8)² + (y + 7)² = 64"],
+["١٢) ادرس الدوائر الأربع","12) study the four circles","a) (4,−3), r = √27 ; b) (−2,4), r = √15 ; c) (−2,3), r = √15 ; d) (0,0), r = 4"]];
+function rend(id,a){$(id).innerHTML=a.map(([x,y,s,n])=>`<details><summary><ar>${x}</ar><en>${y}</en></summary><p class="m">${s}</p>${n?`<div class="note"><span class="pill"><ar>ملاحظة</ar><en>Note</en></span> <ar>${n[0]}</ar><en>${n[1]}</en></div>`:''}</details>`).join('')}
+rend('lw',L);rend('cw',C);
+const Qz=[
+["ميل y = 3x + 2","Gradient of y = 3x + 2",["3","2","6","−3"],0,"m = 3"],
+["y = −4x − 2 يقطع محور y عند","y = −4x − 2 cuts the y-axis at",["(2,0)","(−2,0)","(0,−2)","(0,2)"],2,"x = 0 ⇒ y = −2"],
+["أي زوج متعامد؟","Which pair is perpendicular?",["2x+y=5 , x−2y−4=0","x+2y=5 , x−3y=4","2x−2y=5 , x−y−4=0"],0,"m₁ = −2, m₂ = 1/2 ⇒ product −1"],
+["الزاوية بين 2x+y=5 و x−y−5=0","Angle between 2x+y=5 and x−y−5=0",["3°","71°","45°"],1,"tan φ = |1−(−2)|/|1−2| = 3 ⇒ 71.6°"],
+["تقاطع 2x+7y=23 و 2x−y=−1","Intersection of 2x+7y=23 and 2x−y=−1",["(1,3)","(3,1)","(1,−3)"],0,"y = 2x+1 ⇒ 16x... x = 1, y = 3"],
+["المسافة بين (−1,6) و (2,−4)","Distance between (−1,6) and (2,−4)",["√109","√89","√66"],0,"9 + 100 = 109"],
+["ثلاث نقاط على استقامة واحدة","Collinear points: P(12,5) Q(3,7) R(−1,−1) S(5,11)",["P,Q,R","P,R,S","Q,R,S"],2,"m_QR = m_QS = 2"],
+["y = 3/2 − 6x يقطع محور x عند","y = 3/2 − 6x cuts the x-axis at",["(1/4,0)","(0,1/4)","(0,3/2)"],0,"y = 0 ⇒ x = 1/4"],
+["ميل العمودي على 3y − 4x + 2 = 0","Gradient perpendicular to 3y − 4x + 2 = 0",["3/4","−4/3","−3/4"],2,"m = 4/3 ⇒ −3/4"]];
+Qz[4][4]="2x + 7(2x+1) = 23 ⇒ x = 1, y = 3";
+let sc=0;const dn={};
+$('qz').innerHTML=Qz.map(([a,e,o],i)=>`<div class="card"><b>${i+1}. <ar>${a}</ar><en>${e}</en></b><div>${o.map((t,j)=>`<button class="btn opt m" data-i="${i}" data-j="${j}">${t}</button>`).join('')}</div><div class="res m" id="qx${i}"></div></div>`).join('');
+$('qz').addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;const i=+b.dataset.i,j=+b.dataset.j;if(dn[i])return;dn[i]=1;const ok=j===Qz[i][3];if(ok)sc++;b.classList.add(ok?'ok':'bad');
+ if(!ok)b.parentNode.children[Qz[i][3]].classList.add('ok');$('qx'+i).textContent=(ok?'✓ ':'✗ ')+Qz[i][4];$('sc').textContent=sc+' / 9'});
+function circ(){const D=+$('cd').value,E=+$('ce').value,F=+$('cf').value,cx=-D/2,cy=-E/2,r2=cx*cx+cy*cy-F,o=$('cr2'),s=$('csv');
+ if(r2<=0){o.textContent=r2===0?'r = 0 (point)':'r² < 0 (no circle)';s.innerHTML='';return}
+ const r=Math.sqrt(r2),sh=(v,n)=>v===0?n+'²':`(${n} ${v<0?'+':'−'} ${fx(Math.abs(v))})²`;
+ o.textContent=`${sh(cx,'x')} + ${sh(cy,'y')} = ${fx(r2)} · centre (${fx(cx)}, ${fx(cy)}) · r = ${fx(r)}`;
+ const ex=Math.max(Math.abs(cx),Math.abs(cy))+r+1,k=95/ex,X=100+cx*k,Y=100-cy*k;
+ s.innerHTML=`<line x1="0" y1="100" x2="200" y2="100" style="stroke:var(--mute);stroke-width:1"/><line x1="100" y1="0" x2="100" y2="200" style="stroke:var(--mute);stroke-width:1"/><circle cx="${X}" cy="${Y}" r="${r*k}" style="fill:rgba(10,124,255,.15);stroke:var(--acc);stroke-width:2.5"/><circle cx="${X}" cy="${Y}" r="3.5" style="fill:var(--acc2)"/>`}
+['cd','ce','cf'].forEach(i=>$(i).addEventListener('input',circ));circ();
+tools();draw();
+</script>
+</body>
+</html>
